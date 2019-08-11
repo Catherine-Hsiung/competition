@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xxq.competition.mapper.CompetorMapper">
+    <!--<resultMap id="BaseResultMap" type="com.xxq.competition.entity.Competor">-->
+        <!--<id column="id" jdbcType="INTEGER" property="id" />-->
+        <!--<result column="user_name" jdbcType="VARCHAR" property="userName" />-->
+        <!--<result column="user_email" jdbcType="VARCHAR" property="userEmail" />-->
+        <!--<result column="user_sex" jdbcType="VARCHAR" property="userSex" />-->
+        <!--<result column="user_ident" jdbcType="VARCHAR" property="userIdent" />-->
+        <!--<result column="user_cellpone" jdbcType="VARCHAR" property="userCellpone" />-->
+        <!--<result column="user_password" jdbcType="VARCHAR" property="userPassword" />-->
+    <!--</resultMap>-->
+    <!--<sql id="Base_Column_List">-->
+    <!--id, user_name, user_email, user_sex, user_ident, user_cellpone, user_password-->
+  <!--</sql>-->
+    <!--<select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultType="Map">-->
+        <!--select-->
+        <!--&lt;!&ndash;<include refid="Base_Column_List" />&ndash;&gt;-->
+        <!--p_id,p_name,p_sex,p_age,p_type,p_phone,p_email-->
+        <!--from competor-->
+        <!--where p_id = #{pid,jdbcType=INTEGER}-->
+    <!--</select>-->
+    <!--<insert id="insertCompetitorInfo" parameterType="com.xxq.competition.entity.Competor" >-->
+        <!--insert  into competor (p_id,p_name,p_sex,p_age,p_type,p_phone,p_email) values (-->
+        <!--#{pId,jdbcType=INTEGER},-->
+        <!--#{pName,jdbcType=VARCHAR},-->
+        <!--#{pSex,jdbcType=INTEGER},-->
+        <!--#{pAge,jdbcType=INTEGER},-->
+        <!--#{pType,jdbcType=INTEGER},-->
+        <!--#{pPhone,jdbcType=VARCHAR},-->
+        <!--#{pEmail,jdbcType=VARCHAR})-->
+    <!--</insert>-->
+    <!--<delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">-->
+    <!--delete from userinfo-->
+    <!--where id = #{id,jdbcType=INTEGER}-->
+  <!--</delete>-->
+    <!--<insert id="insert" parameterType="com.lzc.cloudmusic.domain.UserInfo">-->
+    <!--insert into userinfo (id, user_name, user_email,-->
+      <!--user_sex, user_ident, user_cellpone,-->
+      <!--user_password)-->
+    <!--values (#{id,jdbcType=INTEGER}, #{userName,jdbcType=VARCHAR}, #{userEmail,jdbcType=VARCHAR},-->
+      <!--#{userSex,jdbcType=VARCHAR}, #{userIdent,jdbcType=VARCHAR}, #{userCellpone,jdbcType=VARCHAR},-->
+      <!--#{userPassword,jdbcType=VARCHAR})-->
+  <!--</insert>-->
+    <!--<insert id="insertSelective" parameterType="com.lzc.cloudmusic.domain.UserInfo">-->
+        <!--insert into userinfo-->
+        <!--<trim prefix="(" suffix=")" suffixOverrides=",">-->
+            <!--<if test="id != null">-->
+                <!--id,-->
+            <!--</if>-->
+            <!--<if test="userName != null">-->
+                <!--user_name,-->
+            <!--</if>-->
+            <!--<if test="userEmail != null">-->
+                <!--user_email,-->
+            <!--</if>-->
+            <!--<if test="userSex != null">-->
+                <!--user_sex,-->
+            <!--</if>-->
+            <!--<if test="userIdent != null">-->
+                <!--user_ident,-->
+            <!--</if>-->
+            <!--<if test="userCellpone != null">-->
+                <!--user_cellpone,-->
+            <!--</if>-->
+            <!--<if test="userPassword != null">-->
+                <!--user_password,-->
+            <!--</if>-->
+        <!--</trim>-->
+        <!--<trim prefix="values (" suffix=")" suffixOverrides=",">-->
+            <!--<if test="id != null">-->
+                <!--#{id,jdbcType=INTEGER},-->
+            <!--</if>-->
+            <!--<if test="userName != null">-->
+                <!--#{userName,jdbcType=VARCHAR},-->
+            <!--</if>-->
+            <!--<if test="userEmail != null">-->
+                <!--#{userEmail,jdbcType=VARCHAR},-->
+            <!--</if>-->
+            <!--<if test="userSex != null">-->
+                <!--#{userSex,jdbcType=VARCHAR},-->
+            <!--</if>-->
+            <!--<if test="userIdent != null">-->
+                <!--#{userIdent,jdbcType=VARCHAR},-->
+            <!--</if>-->
+            <!--<if test="userCellpone != null">-->
+                <!--#{userCellpone,jdbcType=VARCHAR},-->
+            <!--</if>-->
+            <!--<if test="userPassword != null">-->
+                <!--#{userPassword,jdbcType=VARCHAR},-->
+            <!--</if>-->
+        <!--</trim>-->
+    <!--</insert>-->
+    <!--<update id="updateByPrimaryKeySelective" parameterType="com.lzc.cloudmusic.domain.UserInfo">-->
+        <!--update userinfo-->
+        <!--<set>-->
+            <!--<if test="userName != null">-->
+                <!--user_name = #{userName,jdbcType=VARCHAR},-->
+            <!--</if>-->
+            <!--<if test="userEmail != null">-->
+                <!--user_email = #{userEmail,jdbcType=VARCHAR},-->
+            <!--</if>-->
+            <!--<if test="userSex != null">-->
+                <!--user_sex = #{userSex,jdbcType=VARCHAR},-->
+            <!--</if>-->
+            <!--<if test="userIdent != null">-->
+                <!--user_ident = #{userIdent,jdbcType=VARCHAR},-->
+            <!--</if>-->
+            <!--<if test="userCellpone != null">-->
+                <!--user_cellpone = #{userCellpone,jdbcType=VARCHAR},-->
+            <!--</if>-->
+            <!--<if test="userPassword != null">-->
+                <!--user_password = #{userPassword,jdbcType=VARCHAR},-->
+            <!--</if>-->
+        <!--</set>-->
+        <!--where id = #{id,jdbcType=INTEGER}-->
+    <!--</update>-->
+    <!--<update id="updateByPrimaryKey" parameterType="com.lzc.cloudmusic.domain.UserInfo">-->
+    <!--update userinfo-->
+    <!--set user_name = #{userName,jdbcType=VARCHAR},-->
+      <!--user_email = #{userEmail,jdbcType=VARCHAR},-->
+      <!--user_sex = #{userSex,jdbcType=VARCHAR},-->
+      <!--user_ident = #{userIdent,jdbcType=VARCHAR},-->
+      <!--user_cellpone = #{userCellpone,jdbcType=VARCHAR},-->
+      <!--user_password = #{userPassword,jdbcType=VARCHAR}-->
+    <!--where id = #{id,jdbcType=INTEGER}-->
+  <!--</update>-->
+
+    <!--<select id="getAllUser" resultMap="BaseResultMap">-->
+  	<!--select *from userinfo-->
+  <!--</select>-->
+    <!--<select id="getUserByEmail" parameterType="java.lang.String" resultMap="BaseResultMap">-->
+  	<!--select * from userinfo where  user_email = #{email,jdbcType=VARCHAR}-->
+  <!--</select>-->
+</mapper>

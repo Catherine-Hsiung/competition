@@ -1,0 +1,47 @@
+
+spring:
+  datasource:
+    name: test
+    url: jdbc:mysql://192.168.1.47:3306/competition?serverTimezone=UTC
+    username: root
+    password: ilyf1314520
+    # 使用druid数据源
+    type: com.alibaba.druid.pool.DruidDataSource
+    #driver-class-name: com.mysql.jdbc.Driver
+    filters: stat
+    maxActive: 20
+    initialSize: 1
+    maxWait: 60000
+    minIdle: 1
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: select 'x'
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxOpenPreparedStatements: 20
+#  profiles:
+#    active: prop1
+
+
+mybatis:
+  mapperLocations: classpath:mapper/*.xml  #注意：一定要对应mapper映射xml文件的所在路径
+  typeAliasesPackage: com.xxq.competition.entity # 注意：对应实体类的路径
+
+server:
+  port: 8099
+
+person:
+  lastName: 张三${random.uuid}
+  age: ${random.int}
+  boss: true
+  birth: 2017/12/12
+  maps: {k1: v1,k2: 12}
+  lists:
+    - lisi
+    - zhaoliu
+  dog:
+    name: ${person.lastName}_dog
+    age: 2
+

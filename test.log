@@ -1,0 +1,60 @@
+2019-07-22 21:28:49.996  INFO 10808 --- [main] c.x.c.CompetitionApplicationTests        : Starting CompetitionApplicationTests on DESKTOP-MSMQ1O8 with PID 10808 (started by 12158 in F:\SpringProject\competition)
+2019-07-22 21:28:49.998  INFO 10808 --- [main] c.x.c.CompetitionApplicationTests        : No active profile set, falling back to default profiles: default
+2019-07-22 21:28:50.637  WARN 10808 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.xxx.competition.mapper]' package. Please check your configuration.
+2019-07-22 21:28:52.467  INFO 10808 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-22 21:28:52.920  INFO 10808 --- [main] c.x.c.CompetitionApplicationTests        : Started CompetitionApplicationTests in 3.519 seconds (JVM running for 4.502)
+2019-07-22 21:28:53.140  INFO 10808 --- [main] c.x.c.CompetitionApplicationTests        : info trace
+2019-07-22 21:28:53.140  WARN 10808 --- [main] c.x.c.CompetitionApplicationTests        : warning trace
+2019-07-22 21:28:53.140 ERROR 10808 --- [main] c.x.c.CompetitionApplicationTests        : error trace
+2019-07-22 21:28:53.147  INFO 10808 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-22 21:28:53.149  INFO 10808 --- [Thread-2] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2019-07-22 21:29:54.282  INFO 9764 --- [main] c.x.c.CompetitionApplicationTests        : Starting CompetitionApplicationTests on DESKTOP-MSMQ1O8 with PID 9764 (started by 12158 in F:\SpringProject\competition)
+2019-07-22 21:29:54.284  INFO 9764 --- [main] c.x.c.CompetitionApplicationTests        : No active profile set, falling back to default profiles: default
+2019-07-22 21:29:54.925  WARN 9764 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.xxx.competition.mapper]' package. Please check your configuration.
+2019-07-22 21:29:56.808  INFO 9764 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-22 21:29:57.292  INFO 9764 --- [main] c.x.c.CompetitionApplicationTests        : Started CompetitionApplicationTests in 3.532 seconds (JVM running for 4.485)
+2019-07-22 21:29:57.514  INFO 9764 --- [main] c.x.c.CompetitionApplicationTests        : info trace
+2019-07-22 21:29:57.515  WARN 9764 --- [main] c.x.c.CompetitionApplicationTests        : warning trace
+2019-07-22 21:29:57.515 ERROR 9764 --- [main] c.x.c.CompetitionApplicationTests        : error trace
+2019-07-22 21:29:57.522  INFO 9764 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-22 21:29:57.523  INFO 9764 --- [Thread-2] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2019-07-22 21:30:42.607  INFO 13116 --- [main] c.x.c.CompetitionApplicationTests        : Starting CompetitionApplicationTests on DESKTOP-MSMQ1O8 with PID 13116 (started by 12158 in F:\SpringProject\competition)
+2019-07-22 21:30:42.610  INFO 13116 --- [main] c.x.c.CompetitionApplicationTests        : No active profile set, falling back to default profiles: default
+2019-07-22 21:30:43.306  WARN 13116 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.xxx.competition.mapper]' package. Please check your configuration.
+2019-07-22 21:30:45.209  INFO 13116 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-22 21:30:45.701  INFO 13116 --- [main] c.x.c.CompetitionApplicationTests        : Started CompetitionApplicationTests in 3.664 seconds (JVM running for 4.712)
+2019-07-22 21:30:45.912  INFO 13116 --- [main] c.x.c.CompetitionApplicationTests        : info trace
+2019-07-22 21:30:45.912  WARN 13116 --- [main] c.x.c.CompetitionApplicationTests        : warning trace
+2019-07-22 21:30:45.912 ERROR 13116 --- [main] c.x.c.CompetitionApplicationTests        : error trace
+2019-07-22 21:30:45.919  INFO 13116 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-22 21:30:45.921  INFO 13116 --- [Thread-2] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2019-07-22 21:32:01.300  INFO 3028 --- [main] c.x.c.CompetitionApplicationTests        : Starting CompetitionApplicationTests on DESKTOP-MSMQ1O8 with PID 3028 (started by 12158 in F:\SpringProject\competition)
+2019-07-22 21:32:01.302  INFO 3028 --- [main] c.x.c.CompetitionApplicationTests        : No active profile set, falling back to default profiles: default
+2019-07-22 21:32:02.004  WARN 3028 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.xxx.competition.mapper]' package. Please check your configuration.
+2019-07-22 21:32:03.800  INFO 3028 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-22 21:32:04.257  INFO 3028 --- [main] c.x.c.CompetitionApplicationTests        : Started CompetitionApplicationTests in 3.534 seconds (JVM running for 4.525)
+2019-07-22 21:32:04.433  INFO 3028 --- [main] c.x.c.CompetitionApplicationTests        : info trace
+2019-07-22 21:32:04.434  WARN 3028 --- [main] c.x.c.CompetitionApplicationTests        : warning trace
+2019-07-22 21:32:04.434 ERROR 3028 --- [main] c.x.c.CompetitionApplicationTests        : error trace
+2019-07-22 21:32:04.440  INFO 3028 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-22 21:32:04.441  INFO 3028 --- [Thread-2] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2019-07-22 21:43:56.261  INFO 4592 --- [main] c.x.c.CompetitionApplicationTests        : Starting CompetitionApplicationTests on DESKTOP-MSMQ1O8 with PID 4592 (started by 12158 in F:\SpringProject\competition)
+2019-07-22 21:43:56.262  INFO 4592 --- [main] c.x.c.CompetitionApplicationTests        : No active profile set, falling back to default profiles: default
+2019-07-22 21:43:56.942  WARN 4592 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.xxx.competition.mapper]' package. Please check your configuration.
+2019-07-22 21:43:58.917  INFO 4592 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-22 21:43:59.389  INFO 4592 --- [main] c.x.c.CompetitionApplicationTests        : Started CompetitionApplicationTests in 3.685 seconds (JVM running for 4.738)
+2019-07-22 21:43:59.630  INFO 4592 --- [main] c.x.c.CompetitionApplicationTests        : info trace
+2019-07-22 21:43:59.631  WARN 4592 --- [main] c.x.c.CompetitionApplicationTests        : warning trace
+2019-07-22 21:43:59.631 ERROR 4592 --- [main] c.x.c.CompetitionApplicationTests        : error trace
+2019-07-22 21:43:59.639  INFO 4592 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-22 21:43:59.640  INFO 4592 --- [Thread-2] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2019-07-22 21:44:03.495  INFO 7852 --- [main] c.x.c.CompetitionApplicationTests        : Starting CompetitionApplicationTests on DESKTOP-MSMQ1O8 with PID 7852 (started by 12158 in F:\SpringProject\competition)
+2019-07-22 21:44:03.501  INFO 7852 --- [main] c.x.c.CompetitionApplicationTests        : No active profile set, falling back to default profiles: default
+2019-07-22 21:44:04.195  WARN 7852 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.xxx.competition.mapper]' package. Please check your configuration.
+2019-07-22 21:44:06.580  INFO 7852 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-22 21:44:07.135  INFO 7852 --- [main] c.x.c.CompetitionApplicationTests        : Started CompetitionApplicationTests in 4.22 seconds (JVM running for 5.233)
+2019-07-22 21:44:07.371  INFO 7852 --- [main] c.x.c.CompetitionApplicationTests        : info trace
+2019-07-22 21:44:07.372  WARN 7852 --- [main] c.x.c.CompetitionApplicationTests        : warning trace
+2019-07-22 21:44:07.372 ERROR 7852 --- [main] c.x.c.CompetitionApplicationTests        : error trace
+2019-07-22 21:44:07.378  INFO 7852 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-22 21:44:07.379  INFO 7852 --- [Thread-2] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
