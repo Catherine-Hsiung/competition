@@ -2,14 +2,11 @@ package com.xxq.competition.mapper;
 
 import com.xxq.competition.entity.Competor;
 import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Select;
-
-import java.util.Map;
+import org.springframework.stereotype.Repository;
 
 @Mapper
+@Repository
 public interface CompetorMapper {
-    int getCount();
-    @Select("select * from competor where p_id=#{pid} ")
-    Map selectByPrimaryKey (Integer pid);
-//    void insertCompetitorInfo (Competor competor);
+    void insertCompetor(Competor competor);
+    void updateCompetor(Competor competor);
 }

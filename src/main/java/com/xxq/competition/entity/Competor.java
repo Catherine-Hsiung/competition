@@ -4,12 +4,11 @@ import lombok.Data;
 
 @Data
 public class Competor {
-    private int pId;
-    private String pName;
-    private int pSex;
-    private int pAge;
-    private int pType;
-    private String pPhone;
-    private String pEmail;
-    private float phigh;
+    private Integer id;
+    private String  name;
+    private Integer sex;
+    private Integer age;
+    private Integer role;
+    private String  phone;
+    private String  email;
 }

@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.xxq.competition.mapper.CompetorMapper">
+    <insert id="insertCompetor" parameterType="com.xxq.competition.entity.Competor">
+        insert into competor values (
+        #{name,jdbcType= VARCHAR},
+        #{sex,jdbcType= INTEGER},
+        #{age,jdbcType= INTEGER},
+        #{role,jdbcType= INTEGER},
+        #{phone,jdbcType= VARCHAR},
+        #{email,jdbcType= VARCHAR})
+    </insert>
+    <update id="updateCompetor" parameterType="com.xxq.competition.entity.Competor">
+        update  competor set
+        name = #{name,jdbcType=VARCHAR},
+        sex = #{sex,jdbcType= INTEGER},
+        age = #{age,jdbcType= INTEGER},
+        role = #{role,jdbcType= INTEGER},
+        phone = #{phone,jdbcType= VARCHAR},
+        email = #{email,jdbcType= VARCHAR}
+        where id = #{id,jdbcType= INTEGER}
+    </update>
     <!--<resultMap id="BaseResultMap" type="com.xxq.competition.entity.Competor">-->
         <!--<id column="id" jdbcType="INTEGER" property="id" />-->
         <!--<result column="user_name" jdbcType="VARCHAR" property="userName" />-->

@@ -1,8 +1,7 @@
-
 spring:
   datasource:
-    name: test
-    url: jdbc:mysql://192.168.1.47:3306/competition?serverTimezone=UTC
+    name: competition
+    url: jdbc:mysql://localhost:3306/competition?serverTimezone=UTC
     username: root
     password: ilyf1314520
     # 使用druid数据源
@@ -21,27 +20,12 @@ spring:
     testOnReturn: false
     poolPreparedStatements: true
     maxOpenPreparedStatements: 20
-#  profiles:
-#    active: prop1
-
-
+    schema: classpath:competition.sql # schema.sql中一般存放的是DDL脚本，即通常为创建或更新库表的脚本
+    initialization-mode: always
 mybatis:
   mapperLocations: classpath:mapper/*.xml  #注意：一定要对应mapper映射xml文件的所在路径
   typeAliasesPackage: com.xxq.competition.entity # 注意：对应实体类的路径
 
 server:
   port: 8099
-
-person:
-  lastName: 张三${random.uuid}
-  age: ${random.int}
-  boss: true
-  birth: 2017/12/12
-  maps: {k1: v1,k2: 12}
-  lists:
-    - lisi
-    - zhaoliu
-  dog:
-    name: ${person.lastName}_dog
-    age: 2
 
