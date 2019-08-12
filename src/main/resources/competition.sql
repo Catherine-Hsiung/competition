@@ -13,9 +13,10 @@ create table if not exists turn(
  id int not null auto_increment comment "主键",
  label varchar(20) not null  comment "轮次名称",
  `index` int not null  comment "第几轮",
- `start` bigint not null  comment "开始时间",
- `end` bigint not null  comment "结束时间",
-primary key( id)
+ question_id varchar(30) not null  comment "题目id",
+ current_question  int not null  comment "该轮当前进行到第几题",
+ turn_flag boolean not null default false comment "标记当前轮次是否完结",
+  primary key( id)
 );
 create table if not exists qbank (
      id INT NOT NULL AUTO_INCREMENT COMMENT '主键',
