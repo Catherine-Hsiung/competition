@@ -1,0 +1,264 @@
+swagger: "2.0"
+info:
+  description: "知识竞赛竞答系统"
+  version: "1.0.0"
+  title: "知识竞赛竞答API"
+  termsOfService: "http://swagger.io/terms/"
+  contact:
+    email: "1215840861@qq.com"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+host: "192.168.1.48:8888"
+basePath: "/competition"
+tags:
+- name: "user"
+  description: "Everything about your Pets"
+  externalDocs:
+    description: "Find out more"
+    url: "http://swagger.io"
+- name: "questionbank"
+  description: "Access to Petstore orders"
+- name: "bigscreen"
+  description: "Operations about user"
+  externalDocs:
+    description: "Find out more about our store"
+    url: "http://swagger.io"
+schemes:
+- "https"
+- "http"
+paths: 
+  /user:
+    post:
+      tags:
+      - "user"
+      summary: "add users' information"
+      description: ""
+      operationId: "addUserInfo"
+      consumes: 
+      - "application/json"
+      - "application/xml"
+      produces: 
+      - "application/xml"
+      - "application/json"
+      parameters: 
+      - in: "body"
+        name: "body"
+        description: "user object that needs to be added to the store"
+        required: true
+        schema: 
+          $ref: "#/definitions/User"
+      responses: 
+        200: 
+          description: "response"
+          schema: 
+            $ref: "#/definitions/response"
+  /updateuser:
+    post:
+      tags:
+      - "user"
+      summary: "update users' information"
+      description: ""
+      operationId: "updateUserInfo"
+      consumes: 
+      - "application/json"
+      - "application/xml"
+      produces: 
+      - "application/xml"
+      - "application/json"
+      parameters: 
+      - in: "body"
+        name: "body"
+        description: "user object that needs to be updated in the store"
+        required: true
+        schema: 
+          $ref: "#/definitions/User"
+      responses: 
+        200: 
+          description: "response"
+          schema: 
+            $ref: "#/definitions/response"
+  /getuserinfo:
+    get:
+      tags:
+      - "user"
+      summary: "get users' information"
+      description: ""
+      operationId: "getUserInfo"
+      consumes: 
+      - "application/json"
+      - "application/xml"
+      produces: 
+      - "application/xml"
+      - "application/json"
+      parameters: 
+      - in: "body"
+        name: "body"
+        description: "get user object  the store"
+        required: true
+        schema: 
+          $ref: "#/definitions/User"
+      responses: 
+        200: 
+          description: "response"
+          schema: 
+            $ref: "#/definitions/response"
+            
+  /addquestion:
+    post:
+      tags:
+      - "questionbank"
+      summary: "add question to the question bank"
+      description: ""
+      operationId: "questionbank"
+      consumes: 
+      - "application/json"
+      - "application/xml"
+      produces: 
+      - "application/xml"
+      - "application/json"
+      parameters: 
+      - in: "body"
+        name: "body"
+        description: "add question to the question bank"
+        required: true
+        schema: 
+          $ref: "#/definitions/Qbank"
+      responses: 
+        200: 
+          description: "response"
+          schema: 
+            $ref: "#/definitions/response"
+  
+  /updatequestion:
+    post:
+      tags:
+      - "questionbank"
+      summary: "update question to the question bank"
+      description: ""
+      operationId: "updatequestion"
+      consumes: 
+      - "application/json"
+      - "application/xml"
+      produces: 
+      - "application/xml"
+      - "application/json"
+      parameters: 
+      - in: "body"
+        name: "body"
+        description: "update question to the question bank"
+        required: true
+        schema: 
+          $ref: "#/definitions/Qbank"
+      responses: 
+        200: 
+          description: "response"
+          schema: 
+            $ref: "#/definitions/response"
+            
+  /checkQuestion:
+    get:
+      tags:
+      - "questionbank"
+      summary: "check question form the question bank"
+      description: ""
+      operationId: "checkQuestion"
+      consumes: 
+      - "application/json"
+      - "application/xml"
+      produces: 
+      - "application/xml"
+      - "application/json"
+      parameters: 
+      - in: "body"
+        name: "body"
+        description: "check question form the question bank"
+        required: true
+        schema: 
+          $ref: "#/definitions/Qbank"
+      responses: 
+        200: 
+          description: "response"
+          schema: 
+            $ref: "#/definitions/response"
+            
+  /delQuestion:
+    get:
+      tags:
+      - "questionbank"
+      summary: "delete a question form the question bank"
+      description: ""
+      operationId: "delQuestion"
+      consumes: 
+      - "application/json"
+      - "application/xml"
+      produces: 
+      - "application/xml"
+      - "application/json"
+      parameters: 
+      - in: "body"
+        name: "body"
+        description: "delete a question form the question bank"
+        required: true
+        schema: 
+          $ref: "#/definitions/Qbank"
+      responses: 
+        200: 
+          description: "response"
+          schema: 
+            $ref: "#/definitions/response"
+        
+definitions:
+  User: 
+    type: "object"
+    properties: 
+      id: 
+        type: "integer"
+        format: "int64"
+      name: 
+        type: "string"
+        description: "长度不超过20个字符"
+      sex: 
+        type: "integer"
+        description: "0-男，1-女"
+      age: 
+        type: "integer"
+      role: 
+        type: "integer"
+        description: "0-主持人，1-特邀嘉宾，2-普通用户"
+      phone: 
+        type: "string"
+        description: "只能是11位数字"
+      email: 
+        type: "string"
+        description: "数字和字母以及@和.符号"
+        
+  Qbank:
+    type: "object"
+    properties:
+      id:
+        type: "integer"
+      title:
+        type: "string"
+      answer_a:
+        type: "string"
+      answer_b:
+        type: "string"
+      answer_c:
+        type: "string"
+      answer_d:
+        type: "string"
+      right_answer:
+        type: "string"
+      turn_id:
+        type: "integer"
+    
+  response: 
+    type: "object"
+    properties: 
+      errorCode: 
+        type: "integer"
+      message: 
+        type: "string"
+      data:
+        type: "object"

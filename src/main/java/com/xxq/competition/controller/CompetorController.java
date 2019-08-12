@@ -26,7 +26,13 @@ public class CompetorController {
     }
     @RequestMapping(value = "/updateuser",method = RequestMethod.POST)
     public ResponseMessage updateUserInfo(@Valid @RequestBody Competor competor){
-        competorService.addNewCompetor(competor);
+        competorService.updateCompetor(competor);
         return new ResponseMessage("success",null,0);
+    }
+
+    @RequestMapping(value = "/selectusers",method = RequestMethod.GET)
+    public ResponseMessage selectUserInfo(Integer id){
+        competorService.selectCompetor(id);
+        return new ResponseMessage("success",competorService.selectCompetor(id),0);
     }
 }

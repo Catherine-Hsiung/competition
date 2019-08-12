@@ -5,6 +5,8 @@ import com.xxq.competition.mapper.CompetorMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Map;
+
 @Service
 public class CompetorService {
     @Autowired
@@ -15,5 +17,9 @@ public class CompetorService {
     }
     public void updateCompetor(Competor competor){
         competorMapper.updateCompetor(competor);
+    }
+
+    public Map selectCompetor(Integer id){
+       return competorMapper.selectCompetor(id);
     }
 }

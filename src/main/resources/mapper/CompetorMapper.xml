@@ -3,6 +3,7 @@
 <mapper namespace="com.xxq.competition.mapper.CompetorMapper">
     <insert id="insertCompetor" parameterType="com.xxq.competition.entity.Competor">
         insert into competor values (
+        #{id,jdbcType= INTEGER},
         #{name,jdbcType= VARCHAR},
         #{sex,jdbcType= INTEGER},
         #{age,jdbcType= INTEGER},
@@ -20,6 +21,13 @@
         email = #{email,jdbcType= VARCHAR}
         where id = #{id,jdbcType= INTEGER}
     </update>
+    <select id="selectCompetor" parameterType="java.lang.Integer" resultType="Map">
+        select
+        <!--<include refid="Base_Column_List" />-->
+        *
+        from competor
+        where id = #{id,jdbcType= INTEGER}
+    </select>
     <!--<resultMap id="BaseResultMap" type="com.xxq.competition.entity.Competor">-->
         <!--<id column="id" jdbcType="INTEGER" property="id" />-->
         <!--<result column="user_name" jdbcType="VARCHAR" property="userName" />-->
@@ -32,13 +40,7 @@
     <!--<sql id="Base_Column_List">-->
     <!--id, user_name, user_email, user_sex, user_ident, user_cellpone, user_password-->
   <!--</sql>-->
-    <!--<select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultType="Map">-->
-        <!--select-->
-        <!--&lt;!&ndash;<include refid="Base_Column_List" />&ndash;&gt;-->
-        <!--p_id,p_name,p_sex,p_age,p_type,p_phone,p_email-->
-        <!--from competor-->
-        <!--where p_id = #{pid,jdbcType=INTEGER}-->
-    <!--</select>-->
+
     <!--<insert id="insertCompetitorInfo" parameterType="com.xxq.competition.entity.Competor" >-->
         <!--insert  into competor (p_id,p_name,p_sex,p_age,p_type,p_phone,p_email) values (-->
         <!--#{pId,jdbcType=INTEGER},-->
