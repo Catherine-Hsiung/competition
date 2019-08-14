@@ -49,6 +49,14 @@
         from qbank
         where title = #{title,jdbcType= VARCHAR}
     </select>
+
+    <select id="selectQusetionRandomly"  resultType="com.xxq.competition.entity.Qbank">
+        select
+        *
+        from qbank
+        where turn_id is null order by rand() limit 1;
+    </select>
+
     <delete id="deleteQuestion" parameterType="java.lang.Integer">
     delete from qbank
     where id = #{id,jdbcType=INTEGER}

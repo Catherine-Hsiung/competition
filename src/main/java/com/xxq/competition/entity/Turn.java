@@ -19,5 +19,6 @@ public class Turn {
     private String questionId;
     @NotNull
     private Integer currentQuestion;
+    //标记当前轮次是否完结
     private Boolean turnFlag;
 }

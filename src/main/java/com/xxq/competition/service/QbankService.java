@@ -133,6 +133,9 @@ public class QbankService {
         //写入数据库
         for (Qbank question : questionList) {
             String title = question.getTitle();
+            //检查该题目在数据库中是否已经存在
+            //若不存在，则插入
+            //若存在，则更新
             int cnt = qbankMapper.selectByTitle(title);
             if (cnt==0){
                 qbankMapper.insertQuestion(question);

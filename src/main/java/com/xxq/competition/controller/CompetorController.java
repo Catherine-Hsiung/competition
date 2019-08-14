@@ -37,4 +37,23 @@ public class CompetorController {
         return new ResponseMessage("success",competorService.selectCompetor(id),0);
     }
 
+
+    //预答题练习
+
+    //获取比赛开始接口
+    //显示该用户角色
+    //显示当前轮次
+    //显示当前题目选项
+    //提交答案接口
+    //显示正确答案
+    //实时显示在线答题人数
+    //显示轮次排名
+    //显示总分排名
+
+    //该用户目前总分数
+    //该用户本轮总分数
+    //获取答题历史记录
+    //
+
+
 }

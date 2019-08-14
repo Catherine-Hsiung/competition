@@ -7,7 +7,8 @@
         #{label,jdbcType= VARCHAR},
         #{index,jdbcType= INTEGER},
         #{questionId,jdbcType= VARCHAR},
-        #{currentQuestion,jdbcType= INTEGER}
+        #{currentQuestion,jdbcType= INTEGER},
+        #{turnFlag,jdbcType= INTEGER}
         )
     </insert>
     <update id="updateTurn" parameterType="com.xxq.competition.entity.Turn">
@@ -25,6 +26,13 @@
         *
         from turn
         where turn_flag = #{turnFlag,jdbcType= INTEGER} and max(index)
+    </select>
+
+    <select id="getMaxIndexTurn"  resultType="Turn">
+        select
+        *
+        from turn
+        where `index` = (select max(`index`) from turn);
     </select>
 
     <!--<resultMap id="BaseResultMap" type="com.xxq.competition.entity.Competor">-->

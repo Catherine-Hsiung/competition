@@ -14,5 +14,10 @@ public interface QbankMapper {
     void updateByTitle(Qbank qbank);
     Map selectQuestion(Integer id);
     void deleteQuestion(Integer id);
+    //查询题中某个题目数量
     int selectByTitle(String title);
+
+    Qbank selectQusetionRandomly();
+
+
 }
