@@ -5,9 +5,8 @@ import com.xxq.competition.response.ResponseMessage;
 import com.xxq.competition.service.QbankService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -41,4 +40,15 @@ public class QbankController {
         return new ResponseMessage("success",null,0);
     }
 
+    @RequestMapping(value = "/import",method = RequestMethod.POST)
+    public boolean importQuestion(@RequestParam("proxyfile") MultipartFile file){
+        boolean test = false;
+        String filename = file.getOriginalFilename();
+        try {
+            test = qbankService.importQuestionExcelFile(filename,file);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return test;
+    }
 }

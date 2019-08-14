@@ -11,6 +11,8 @@ import java.util.Map;
 public interface QbankMapper {
     void insertQuestion(Qbank qbank);
     void updateQuestion(Qbank qbank);
+    void updateByTitle(Qbank qbank);
     Map selectQuestion(Integer id);
     void deleteQuestion(Integer id);
+    int selectByTitle(String title);
 }

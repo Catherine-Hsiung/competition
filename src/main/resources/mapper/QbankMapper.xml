@@ -24,12 +24,30 @@
         turn_id = #{turn_id,jdbcType= INTEGER}
         where id = #{id,jdbcType= INTEGER}
     </update>
+    <update id="updateByTitle" parameterType="com.xxq.competition.entity.Qbank">
+        update  qbank set
+        answer_a = #{answer_a,jdbcType= VARCHAR},
+        answer_b = #{answer_b,jdbcType= VARCHAR},
+        answer_c = #{answer_c,jdbcType= VARCHAR},
+        answer_d = #{answer_d,jdbcType= VARCHAR},
+        right_answer = #{right_answer,jdbcType= VARCHAR},
+        turn_id = #{turn_id,jdbcType= INTEGER}
+        where title = #{title,jdbcType= VARCHAR}
+    </update>
     <select id="selectQuestion" parameterType="java.lang.Integer" resultType="Map">
         select
         <!--<include refid="Base_Column_List" />-->
         *
         from qbank
         where id = #{id,jdbcType= INTEGER}
+    </select>
+
+    <select id="selectByTitle"  resultType="java.lang.Integer">
+        select
+        <!--<include refid="Base_Column_List" />-->
+        count(*)
+        from qbank
+        where title = #{title,jdbcType= VARCHAR}
     </select>
     <delete id="deleteQuestion" parameterType="java.lang.Integer">
     delete from qbank

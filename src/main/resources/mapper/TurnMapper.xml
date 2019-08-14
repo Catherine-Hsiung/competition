@@ -24,7 +24,7 @@
         <!--<include refid="Base_Column_List" />-->
         *
         from turn
-        where turn_flag = #{turnFlag,jdbcType= INTEGER} and max(index) 
+        where turn_flag = #{turnFlag,jdbcType= INTEGER} and max(index)
     </select>
 
     <!--<resultMap id="BaseResultMap" type="com.xxq.competition.entity.Competor">-->

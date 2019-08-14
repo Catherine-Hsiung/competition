@@ -20,13 +20,13 @@ create table if not exists turn(
 );
 create table if not exists qbank (
      id INT NOT NULL AUTO_INCREMENT COMMENT '主键',
-     title VARCHAR(100) NOT NULL COMMENT '题目',
+     title VARCHAR(100) unique NOT NULL COMMENT '题目',
      answer_a VARCHAR(100) NOT NULL COMMENT '答案1',
      answer_b VARCHAR(100) NOT NULL COMMENT '答案2',
      answer_c VARCHAR(100) NOT NULL COMMENT '答案3',
      answer_d VARCHAR(100) NOT NULL COMMENT '答案4',
      right_answer VARCHAR(100) NOT NULL COMMENT '正确答案',
-     turn_id INT NOT NULL COMMENT '轮次id',
+     turn_id INT COMMENT '轮次id',
     PRIMARY KEY ( id)
 );
 create table if not exists result(
