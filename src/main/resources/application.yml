@@ -30,6 +30,8 @@ mybatis:
 
 server:
   port: 8099
+
+
   http:
     multipart:
       enabled: true #默认支持文件上传. 

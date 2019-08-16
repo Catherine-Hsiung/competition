@@ -16,8 +16,9 @@ public interface QbankMapper {
     void deleteQuestion(Integer id);
     //查询题中某个题目数量
     int selectByTitle(String title);
-
+    //随机选取一个题目
     Qbank selectQusetionRandomly();
-
+    //计算当前轮次选取题目个数
+    int calTurnQuestionNum(Integer turnId);
 
 }

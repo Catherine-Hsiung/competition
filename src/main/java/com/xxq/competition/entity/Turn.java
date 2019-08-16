@@ -15,8 +15,7 @@ public class Turn {
     @NotNull
     @Range(min = 1,max = 4)
     private Integer index;
-    @NotNull
-    private String questionId;
+    private Integer questionId;
     @NotNull
     private Integer currentQuestion;
     //标记当前轮次是否完结

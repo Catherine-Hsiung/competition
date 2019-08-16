@@ -13,29 +13,31 @@ public class TurnService {
     @Autowired
     TurnMapper turnMapper;
 
-    public Turn getMaxIndexTurn(){
+    public Turn getMaxIndexTurn() {
 
-        Turn indexTurn = turnMapper.getMaxIndexTurn();
-        if (indexTurn==null){
-            indexTurn = new Turn();
-            indexTurn.setIndex(1);
-            indexTurn.setLabel("第1轮");
-            indexTurn.setTurnFlag(false);
-            turnMapper.createTurn(indexTurn);
-            return indexTurn;
-        }else {
-            log.info("index:{}", JSON.toJSONString(indexTurn));
-            if (indexTurn.getTurnFlag()){
-                if (indexTurn.getIndex()<4) {
-                    indexTurn.setIndex(indexTurn.getIndex() + 1);
-                    turnMapper.createTurn(indexTurn);
-                    return indexTurn;
-                }else {
+        Turn turn = turnMapper.getMaxIndexTurn();
+        if (turn == null) {
+            turn = new Turn();
+            turn.setIndex(1);
+            turn.setLabel("第1轮");
+            turn.setTurnFlag(false);
+            turnMapper.createTurn(turn);
+            return turn;
+        } else {
+            log.info("index:{}", JSON.toJSONString(turn));
+            if (turn.getTurnFlag()) {
+                if (turn.getIndex() < 4) {
+                    turn.setIndex(turn.getIndex() + 1);
+                    turn.setLabel("第"+turn.getIndex()+"轮");
+                    turn.setId(null);
+                    turnMapper.createTurn(turn);
+                    return turn;
+                } else {
                     log.info("比赛结束");
                     return null;
                 }
-            }else {
-                return indexTurn;
+            } else {
+                return turn;
             }
 
         }

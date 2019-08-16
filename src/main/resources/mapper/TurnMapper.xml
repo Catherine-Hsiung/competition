@@ -6,7 +6,7 @@
         #{id,jdbcType= INTEGER},
         #{label,jdbcType= VARCHAR},
         #{index,jdbcType= INTEGER},
-        #{questionId,jdbcType= VARCHAR},
+        #{questionId,jdbcType= INTEGER},
         #{currentQuestion,jdbcType= INTEGER},
         #{turnFlag,jdbcType= INTEGER}
         )
@@ -14,10 +14,10 @@
     <update id="updateTurn" parameterType="com.xxq.competition.entity.Turn">
         update  turn set
         label = #{label,jdbcType= VARCHAR},
-        index = #{index,jdbcType= INTEGER},
-        question_id = #{questionId,jdbcType= VARCHAR},
+        `index` = #{index,jdbcType= INTEGER},
+        question_id = #{questionId,jdbcType= INTEGER},
         current_question = #{currentQuestion,jdbcType= INTEGER},
-        turn_flag = #{turnFlag,jdbcType= INTEGER}
+        `turn_flag` = #{turnFlag,jdbcType= BOOLEAN}
         where id = #{id,jdbcType= INTEGER}
     </update>
     <select id="selectTurn" parameterType="java.lang.Integer" resultType="Turn">
@@ -25,7 +25,7 @@
         <!--<include refid="Base_Column_List" />-->
         *
         from turn
-        where turn_flag = #{turnFlag,jdbcType= INTEGER} and max(index)
+        where turn_flag = #{turnFlag,jdbcType= BOOLEAN} and max(index)
     </select>
 
     <select id="getMaxIndexTurn"  resultType="Turn">

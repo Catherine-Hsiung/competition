@@ -2,7 +2,6 @@ package com.xxq.competition.controller;
 
 import com.xxq.competition.response.ResponseMessage;
 import com.xxq.competition.service.HostService;
-import com.xxq.competition.service.QbankService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,8 +16,8 @@ public class HostController {
     HostService hostService;
 
     @RequestMapping("/random")
-    public ResponseMessage selectRandomQuestion(){
-        return new ResponseMessage("success",hostService.selectRandomQuestion(),0);
+    public ResponseMessage selectRandomQuestion() {
+        return new ResponseMessage("success", hostService.selectRandomQuestion(), 0);
     }
 
 

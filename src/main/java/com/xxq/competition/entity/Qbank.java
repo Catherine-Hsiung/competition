@@ -10,15 +10,15 @@ public class Qbank {
     @NotNull
     private String title;
     @NotNull
-    private String answer_a;
+    private String answerA;
     @NotNull
-    private String answer_b;
+    private String answerB;
     @NotNull
-    private String answer_c;
+    private String answerC;
     @NotNull
-    private String answer_d;
+    private String answerD;
     @NotNull
-    private String right_answer;
-    @NotNull
-    private Integer turn_id;
+    private String rightAnswer;
+    private Integer turnId;
+    private Boolean questionEffect;
 }

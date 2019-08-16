@@ -91,35 +91,35 @@ public class QbankService {
             if (answera == null || answera.isEmpty()) {
                 System.out.println("导入失败(第" + (i + 1) + "行,答案A为空)");
             }
-            qbank.setAnswer_a(answera);
+            qbank.setAnswerA(answera);
             //从Excel读取答案B
             row.getCell(2).setCellType(CellType.STRING);
             String answerb = row.getCell(2).getStringCellValue();
             if (answerb == null || answerb.isEmpty()) {
                 System.out.println("导入失败(第" + (i + 1) + "行,答案B为空)");
             }
-            qbank.setAnswer_b(answerb);
+            qbank.setAnswerB(answerb);
             //从Excel读取答案C
             row.getCell(3).setCellType(CellType.STRING);
             String answerc = row.getCell(3).getStringCellValue();
             if (answerc == null || answerc.isEmpty()) {
                 System.out.println("导入失败(第" + (i + 1) + "行,答案C为空)");
             }
-            qbank.setAnswer_c(answerc);
+            qbank.setAnswerC(answerc);
             //从Excel读取答案D
             row.getCell(4).setCellType(CellType.STRING);
             String answerd = row.getCell(4).getStringCellValue();
             if (answerd == null || answerd.isEmpty()) {
                 System.out.println("导入失败(第" + (i + 1) + "行,答案D为空)");
             }
-            qbank.setAnswer_d(answerd);
+            qbank.setAnswerD(answerd);
             //从Excel读取正确答案
             row.getCell(5).setCellType(CellType.STRING);
             String rightAnwser = row.getCell(5).getStringCellValue();
             if (rightAnwser == null || rightAnwser.isEmpty()) {
                 System.out.println("导入失败(第" + (i + 1) + "行,正确答案为空)");
             }
-            qbank.setRight_answer(rightAnwser);
+            qbank.setRightAnswer(rightAnwser);
             //从Excel读取轮次为空
 //            row.getCell(6).setCellType(CellType.STRING);
 //            Integer turnId = Integer.valueOf(row.getCell(6).getStringCellValue());

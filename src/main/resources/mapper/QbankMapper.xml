@@ -5,33 +5,29 @@
         insert into qbank values (
         #{id,jdbcType= INTEGER},
         #{title,jdbcType= VARCHAR},
-        #{answer_a,jdbcType= VARCHAR},
-        #{answer_b,jdbcType= VARCHAR},
-        #{answer_c,jdbcType= VARCHAR},
-        #{answer_d,jdbcType= VARCHAR},
-        #{right_answer,jdbcType= VARCHAR},
-        #{turn_id,jdbcType= INTEGER}
+        #{answerA,jdbcType= VARCHAR},
+        #{answerB,jdbcType= VARCHAR},
+        #{answerC,jdbcType= VARCHAR},
+        #{answerD,jdbcType= VARCHAR},
+        #{rightAnswer,jdbcType= VARCHAR},
+        #{turnId,jdbcType= INTEGER},
+        #{questionEffect,jdbcType= BOOLEAN}
         )
     </insert>
     <update id="updateQuestion" parameterType="com.xxq.competition.entity.Qbank">
         update  qbank set
-        title = #{title,jdbcType=VARCHAR},
-        answer_a = #{answer_a,jdbcType= VARCHAR},
-        answer_b = #{answer_b,jdbcType= VARCHAR},
-        answer_c = #{answer_c,jdbcType= VARCHAR},
-        answer_d = #{answer_d,jdbcType= VARCHAR},
-        right_answer = #{right_answer,jdbcType= VARCHAR},
-        turn_id = #{turn_id,jdbcType= INTEGER}
+        turn_id = #{turnId,jdbcType= INTEGER}
         where id = #{id,jdbcType= INTEGER}
     </update>
     <update id="updateByTitle" parameterType="com.xxq.competition.entity.Qbank">
         update  qbank set
-        answer_a = #{answer_a,jdbcType= VARCHAR},
-        answer_b = #{answer_b,jdbcType= VARCHAR},
-        answer_c = #{answer_c,jdbcType= VARCHAR},
-        answer_d = #{answer_d,jdbcType= VARCHAR},
-        right_answer = #{right_answer,jdbcType= VARCHAR},
-        turn_id = #{turn_id,jdbcType= INTEGER}
+        answer_a = #{answerA,jdbcType= VARCHAR},
+        answer_b = #{answerB,jdbcType= VARCHAR},
+        answer_c = #{answerC,jdbcType= VARCHAR},
+        answer_d = #{answerD,jdbcType= VARCHAR},
+        right_answer = #{rightAnswer,jdbcType= VARCHAR},
+        turn_id = #{turnId,jdbcType= INTEGER},
+        question_effictive = #{questionEffect,jdbcType= BOOLEAN}
         where title = #{title,jdbcType= VARCHAR}
     </update>
     <select id="selectQuestion" parameterType="java.lang.Integer" resultType="Map">
@@ -57,10 +53,20 @@
         where turn_id is null order by rand() limit 1;
     </select>
 
+    <select id="calTurnQuestionNum" parameterType="java.lang.Integer" resultType="java.lang.Integer">
+        select
+        count(*)
+        from qbank
+        where turn_id = #{turnId,jdbcType= INTEGER} and question_effictive = true ;
+    </select>
+
+
     <delete id="deleteQuestion" parameterType="java.lang.Integer">
     delete from qbank
     where id = #{id,jdbcType=INTEGER}
     </delete>
+
+
     <!--<resultMap id="BaseResultMap" type="com.xxq.competition.entity.Competor">-->
     <!--<id column="id" jdbcType="INTEGER" property="id" />-->
     <!--<result column="user_name" jdbcType="VARCHAR" property="userName" />-->
