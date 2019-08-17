@@ -1,6 +1,6 @@
 create table if not exists competor(
  id int not null auto_increment,
- name varchar(50) not null,
+ `name` varchar(50) not null,
  sex int not null comment "1，男性，2，女性",
  age int,
  role int not null comment "参赛人员角色,1，超级管员，2，特邀嘉宾 3，普通观众",
@@ -26,6 +26,7 @@ create table if not exists qbank (
      answer_c VARCHAR(100) NOT NULL COMMENT '答案3',
      answer_d VARCHAR(100) NOT NULL COMMENT '答案4',
      right_answer VARCHAR(100) NOT NULL COMMENT '正确答案',
+     question_effictive boolean default true COMMENT '统计结果时，题是否有效',
      turn_id INT COMMENT '轮次id',
     PRIMARY KEY ( id)
 );

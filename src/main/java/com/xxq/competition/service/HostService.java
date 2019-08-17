@@ -28,7 +28,7 @@ public class HostService {
             log.info("当前轮次已结束");
             return null;
         }
-        int turnQuestionNum = qbankMapper.calTurnQuestionNum(turn.getId());
+        int turnQuestionNum = qbankMapper.calTurnQuestionNum(turn.getIndex());
         if (turnQuestionNum == 6) {
             log.info("当前轮次已结束");
             if (!turn.getTurnFlag()){
@@ -42,9 +42,12 @@ public class HostService {
             turn.setCurrentQuestion(turnQuestionNum + 1);
             turn.setQuestionId(qbank.getId());
             turnMapper.updateTurn(turn);
-            qbank.setTurnId(turn.getId());
+            qbank.setTurnId(turn.getIndex());
             qbankMapper.updateQuestion(qbank);
             return qbank;
+        }else if(qbank==null){
+            log.error("没有可用题目");
+            return null;
         }
         log.error("未知错误");
         return null;

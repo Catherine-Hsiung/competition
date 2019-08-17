@@ -27,11 +27,12 @@ public class TurnService {
             log.info("index:{}", JSON.toJSONString(turn));
             if (turn.getTurnFlag()) {
                 if (turn.getIndex() < 4) {
-                    turn.setIndex(turn.getIndex() + 1);
-                    turn.setLabel("第"+turn.getIndex()+"轮");
-                    turn.setId(null);
-                    turnMapper.createTurn(turn);
-                    return turn;
+                    Turn nextTurn = new Turn();
+                    nextTurn.setIndex(turn.getIndex() + 1);
+                    nextTurn.setLabel("第"+nextTurn.getIndex()+"轮");
+                    nextTurn.setTurnFlag(false);
+                    turnMapper.createTurn(nextTurn);
+                    return nextTurn;
                 } else {
                     log.info("比赛结束");
                     return null;
