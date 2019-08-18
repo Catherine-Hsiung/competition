@@ -37,7 +37,7 @@ create table if not exists result(
  taketime bigint not null comment "答题花费时间",
  competor_id int not null comment "参赛人员信息表id",
  qbank_id int not null comment "题库id",
- turn_id int not null comment "竞赛轮次id",
+ turn_index int not null comment "竞赛轮次index",
 primary key(id)
 );
 
