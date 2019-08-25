@@ -22,6 +22,19 @@ spring:
     maxOpenPreparedStatements: 20
     schema: classpath:competition.sql # schema.sql中一般存放的是DDL脚本，即通常为创建或更新库表的脚本
     initialization-mode: always
+
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    timeout: 10000
+    maxIdle: 300    #最大空闲数
+    maxTotal: 1000  #控制一个pool可分配多少个jedis实例,
+    maxWaitMillis: 1000   #最大建立连接等待时间。如果超过此时间将接到异常。设为-1表示无限制。
+    minEvictableIdleTimeMillis: 30000   #连接的最小空闲时间 默认1800000毫秒(30分钟)
+    testOnBorrow: true #是否在从池中取出连接前进行检验,如果检验失败,则从池中去除连接并尝试取出另一个
+    testWhileIdle: #在空闲时检查有效性, 默认false
+
+
 mybatis:
   mapperLocations: classpath:mapper/*.xml  #注意：一定要对应mapper映射xml文件的所在路径
   typeAliasesPackage: com.xxq.competition.entity # 注意：对应实体类的路径
@@ -39,4 +52,6 @@ server:
       location: .  # 上传文件的临时目录 
       max-file-size: 1Mb # 最大支持文件大小 
       max-request-size: 10Mb # 最大支持请求大小
+
+
 

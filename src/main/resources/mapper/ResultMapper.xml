@@ -4,23 +4,36 @@
     <insert id="commitResult" parameterType="com.xxq.competition.entity.Result">
         insert into result values (
         #{id,jdbcType= INTEGER},
-        #{result,jdbcType= INTEGER},
-        #{startTmime,jdbcType= LONG},
-        #{takeTime,jdbcType= LONG},
+        #{result,jdbcType= VARCHAR},
+        #{startTmime,jdbcType= BIGINT},
+        #{takeTime,jdbcType= BIGINT},
         #{competorId,jdbcType= INTEGER},
         #{qbankId,jdbcType= INTEGER},
-        #{turnIndex,jdbcType= INTEGER}
+        #{turnIndex,jdbcType= INTEGER},
+        #{score,jdbcType= INTEGER},
         )
     </insert>
 
-    <select id="selectTurn" parameterType="java.lang.Integer" resultType="Result">
+    <!--<select id="selectTurn" parameterType="java.lang.Integer" resultType="Result">-->
+        <!--select-->
+        <!--*-->
+        <!--from turn-->
+        <!--where turn_flag = #{turnFlag,jdbcType= BOOLEAN} and max(index)-->
+    <!--</select>-->
+
+    <select id="competorScores" parameterType="java.lang.Integer" resultType="java.lang.Integer">
         select
-        <!--<include refid="Base_Column_List" />-->
-        *
+        count (score)
         from turn
-        where turn_flag = #{turnFlag,jdbcType= BOOLEAN} and max(index)
+        where competor_id =  #{competorId,jdbcType= INTEGER}
     </select>
 
+    <select id="competorTurnScore"  resultType="java.lang.Integer">
+        select
+        count (score)
+        from turn
+        where competor_id =  #{competorId,jdbcType= INTEGER} and turn_index=  #{turnIndex,jdbcType= INTEGER}
+    </select>
 
     <!--<resultMap id="BaseResultMap" type="com.xxq.competition.entity.Competor">-->
     <!--<id column="id" jdbcType="INTEGER" property="id" />-->

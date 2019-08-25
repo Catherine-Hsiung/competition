@@ -9,12 +9,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/turn")
 @RestController
 public class TurnController {
-    @Autowired
-    TurnService turnService;
-
-    @RequestMapping("/index")
-    public ResponseMessage getMaxTuenIndex(){
-        //int maxIndex = turnService.getMaxIndexTurn().getIndex();
-        return new ResponseMessage("success",turnService.getMaxIndexTurn(),0);
-    }
+//    @Autowired
+//    TurnService turnService;
+//
+//    @RequestMapping("/index")
+//    public ResponseMessage getMaxTuenIndex(){
+//        //int maxIndex = turnService.getMaxIndexTurn().getIndex();
+//        return new ResponseMessage("success",turnService.getMaxIndexTurn(),0);
+//    }
 }

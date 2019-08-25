@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.xxq.competition.mapper.CompetorMapper">
-    <insert id="insertCompetor" parameterType="com.xxq.competition.entity.Competor">
+    <insert id="insertCompetor" keyProperty="id" parameterType="com.xxq.competition.entity.Competor" useGeneratedKeys="true">
         insert into competor values (
         #{id,jdbcType= INTEGER},
         #{name,jdbcType= VARCHAR},
@@ -28,6 +28,15 @@
         from competor
         where id = #{id,jdbcType= INTEGER}
     </select>
+
+    <select id="getCompetorRole" parameterType="java.lang.Integer" resultType="java.lang.Integer">
+        select
+        `role`
+        from competor
+        where id = #{id,jdbcType= INTEGER}
+    </select>
+
+
     <!--<resultMap id="BaseResultMap" type="com.xxq.competition.entity.Competor">-->
         <!--<id column="id" jdbcType="INTEGER" property="id" />-->
         <!--<result column="user_name" jdbcType="VARCHAR" property="userName" />-->

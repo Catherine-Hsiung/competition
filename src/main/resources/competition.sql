@@ -32,12 +32,13 @@ create table if not exists qbank (
 );
 create table if not exists result(
  id int not null auto_increment comment "主键",
- result int not null comment "答题结果,1，答对 2，答错 3 放弃",
+ result VARCHAR(100) not null comment "答题结果",
  starttmime bigint not null comment "题目开始时间",
  taketime bigint not null comment "答题花费时间",
  competor_id int not null comment "参赛人员信息表id",
  qbank_id int not null comment "题库id",
  turn_index int not null comment "竞赛轮次index",
+ score int default 0 comment "竞赛分数",
 primary key(id)
 );
 

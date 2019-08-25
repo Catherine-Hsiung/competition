@@ -28,12 +28,20 @@
         where turn_flag = #{turnFlag,jdbcType= BOOLEAN} and max(index)
     </select>
 
-    <select id="getMaxIndexTurn"  resultType="Turn">
+    <select id="getMaxIndexTurn"  resultType="com.xxq.competition.entity.Turn">
         select
         *
         from turn
         where `index` = (select max(`index`) from turn);
     </select>
+
+    <select id="getTurnRank"  resultType="com.xxq.competition.entity.RankInfo">
+        select
+        *
+        from turn
+        where `index` = (select max(`index`) from turn);
+    </select>
+
 
     <!--<resultMap id="BaseResultMap" type="com.xxq.competition.entity.Competor">-->
     <!--<id column="id" jdbcType="INTEGER" property="id" />-->
